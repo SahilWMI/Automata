@@ -7,4 +7,11 @@ function setup() {
 
 function draw() {
     background(220);
+
+    for(let i = 0; i < cells.length; i++) {
+        let x = i * w;
+        stroke(0);
+        FileList(255 - cells[i] * 255);
+        square(x, 0, w);
+    }
 }

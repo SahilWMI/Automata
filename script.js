@@ -24,3 +24,7 @@ function draw() {
         nextCells[i] = newState;
     }
 }
+
+function calculateState(a, b, c) {
+    
+}

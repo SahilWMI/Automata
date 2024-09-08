@@ -16,7 +16,10 @@ function draw() {
     }
 
     let nextCells = [];
-    for(let i = 0; i < cells.length; i++) {
+    nextCells[0] = cells[0];
+    nextCells[cells.length - 1] = cells[cells.length - 1];
+
+    for(let i = 0; i < cells.length - 1; i++) {
         let left = cells[i - 1];
         let right = cells[i + 1];
         let state = cells[i];
@@ -26,5 +29,5 @@ function draw() {
 }
 
 function calculateState(a, b, c) {
-    
+
 }

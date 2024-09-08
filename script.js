@@ -11,7 +11,16 @@ function draw() {
     for(let i = 0; i < cells.length; i++) {
         let x = i * w;
         stroke(0);
-        Fill(255 - cells[i] * 255);
+        fill(255 - cells[i] * 255);
         square(x, 0, w);
+    }
+
+    let nextCells = [];
+    for(let i = 0; i < cells.length; i++) {
+        let left = cells[i - 1];
+        let right = cells[i + 1];
+        let state = cells[i];
+        let newState = calculateState(left, state, right);
+        nextCells[i] = newState;
     }
 }

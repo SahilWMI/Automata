@@ -1,24 +1,27 @@
-let cells = [1, 0, 0, 1, 0, 1, 0, 1, 1, 0];
-let w = 40;
+let cells = [];
+let w = 10;
+let y = 0;
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(410, 4010);
     let total =width / w;
-    for (let i; i < total;i++) {
-        cells[i] = floor(random(2));
+    for (let i = 0; i < total; i++) {
+        cells[i] = 0;
     }
+    cells[floor(total/2)]
     background(255);
 }
 
 function draw() {
-    background(220);
 
     for(let i = 0; i < cells.length; i++) {
         let x = i * w;
         stroke(0);
         fill(255 - cells[i] * 255);
-        square(x, 0, w);
+        square(x, y, w);
     }
+
+    y +=w;
 
     let nextCells = [];
     nextCells[0] = cells[0];

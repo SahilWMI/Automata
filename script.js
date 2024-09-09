@@ -3,6 +3,11 @@ let w = 40;
 
 function setup() {
     createCanvas(400, 400);
+    let total =width / w;
+    for (let i; i < total;i++) {
+        cells[i] = floor(random(2));
+    }
+    background(255);
 }
 
 function draw() {
@@ -26,6 +31,7 @@ function draw() {
         let newState = calculateState(left, state, right);
         nextCells[i] = newState;
     }
+    cells = nextCells;
 }
 
 function calculateState(a, b, c) {

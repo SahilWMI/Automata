@@ -1,9 +1,9 @@
 let cells = [];
-let w = 10;
+let w = 5;
 let y = 0;
 
 function setup() {
-    createCanvas(410, 410);
+    createCanvas(600, 410);
     let total =width / w;
     for (let i = 0; i < total; i++) {
         cells[i] = 0;
@@ -13,7 +13,6 @@ function setup() {
 }
 
 function draw() {
-
     for(let i = 0; i < cells.length; i++) {
         let x = i * w;
         stroke(0);

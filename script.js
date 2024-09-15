@@ -3,12 +3,12 @@ let w = 10;
 let y = 0;
 
 function setup() {
-    createCanvas(410, 4010);
+    createCanvas(410, 410);
     let total =width / w;
     for (let i = 0; i < total; i++) {
         cells[i] = 0;
     }
-    cells[floor(total/2)]
+    cells[floor(total/2)] = 1;
     background(255);
 }
 

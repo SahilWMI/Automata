@@ -38,7 +38,7 @@ function draw() {
 
 function calculateState(a, b, c) {
 
-    let ruleset = '10110110';
+    let ruleset = [1,0,1,1,0,1,1,0];
 
     if (a == 1 && b == 1 && c == 1) return 1;
     if (a == 1 && b == 1 && c == 0) return 0;
